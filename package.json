@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-mono-blog-theme",
+  "description": "NextJS Mono Blog Theme",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Clovis Rosa <clovis.souzarosa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clovis-rosa/nextjs-mono-blog-theme"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [ 
+    "nextjs",
+    "markdown",
+    "react",
+    "javascript",
+    "scss",
+    "blog",
+    "theme"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "date-fns": "^2.16.1",
+    "gray-matter": "^4.0.2",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "remark": "^12.0.1",
+    "remark-html": "^13.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.27.0"
+  }
+}

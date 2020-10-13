@@ -1,0 +1,46 @@
+h1 {
+  font-size: clamp(1.75rem, 5vw, 4.2rem);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 2.66);
+  font-family: var(--fontFamilyPrimary);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 5vw, 3.15rem);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 2.33);
+  font-family: var(--fontFamilyPrimary);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 5vw, 2rem);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 2);
+  font-family: var(--fontFamilyPrimary);
+}
+
+h4 {
+  font-size: clamp(1.75rem, 5vw, 1.5rem);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 1.667);
+  font-family: var(--fontFamilyPrimary);
+}
+
+h5 {
+  font-size: clamp(1.75rem, 5vw, 1.35rem);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 1.5);
+  font-family: var(--fontFamilyPrimary);
+}
+
+h6 {
+  font-size: calc(var(--fontSize) * 1);
+  letter-spacing: var(--letterSpacing);
+  font-weight: calc(var(--fontWeight) * 1);
+  font-family: var(--fontFamilyPrimary);
+}
+
+/* Add the correct font size in all browsers. */
+small {
+  font-size: 80%;
+}
