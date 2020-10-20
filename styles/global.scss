@@ -1,7 +1,3 @@
-/* ALL SCSS IMPORTS HERE */
-@import "./scss/webfonts";
-@import "./scss/typography";
-
 /* Box sizing rules */
 *,
 *:after,
@@ -32,17 +28,6 @@ dd {
 }
 
 :root {
-  /* FONT-FAMILY */
-  --fontFamilyPrimary: "Space Mono", monospace;
-  --fontFamilySecondary: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
-    Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-
-  /* VARIABLES */
-  --fontSize: calc(12px + 0.698vw);
-  --lineHeight: calc(var(--fontSize) * 1.4);
-  --letterSpacing: calc(var(--fontSize) * 0.0015);
-  --fontWeight: 300;
-
   /* COLORS */
   --background-gray: #c9c7c5; /* light grey */
   --color-black: #28282a;
@@ -83,42 +68,48 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--fontFamilyPrimary);
-  font-size: 100%;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-rendering: optimizelegibility;
+  font-feature-settings: normal;
   word-break: break-word;
-  hyphens: auto;
+  // hyphens: auto;
   color: var(--color-grey-10);
   background: var(--color-grey-0);
   -webkit-tap-highlight-color: transparent;
-}
-
-p,
-li,
-b,
-i,
-strong,
-a,
-mark {
-  font-family: var(--fontFamilyPrimary);
-  font-size: var(--fontSize);
-  line-height: var(--lineHeight);
-  font-weight: calc(var(--fontWeight) * 1.33);
-  letter-spacing: var(--letterSpacing);
-  font-feature-settings: normal;
 }
 
 strong {
   font-weight: bold;
 }
 
-code {
+code:not([class]) {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: calc(var(--fontSize) * 1.1);
-  font-weight: calc(var(--fontWeight) * 1.33);
-  line-height: var(--lineHeight);
-  letter-spacing: var(--letterSpacing);
-  color: #eb5757;
+  font-size: 14px;
+  font-weight: 700;
+  // font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.022em;
+  padding: 0.2rem;
+  color: black;
+  background: var(--color-grey-2);
+  // background: #1e1e1e;
+}
+
+// div.code-toobar,
+// pre,
+// code {
+//   width: 900px !important;
+//   margin: 0 auto !important;
+// }
+// div.toolbar {
+//   right: 6.45em !important;
+// }
+
+::selection {
+  color: var(--color-grey-0);
+  background-color: var(--color-blue-0);
 }
 
 mark {
@@ -144,24 +135,6 @@ blockquote {
   border-radius: 2px;
   padding: 2.5vw;
   margin: 2%;
-}
-
-pre {
-  font-family: var(--fontFamilyPrimary);
-  font-size: calc(var(--fontSize) * 1.1);
-  letter-spacing: var(--letterSpacing);
-  white-space: pre-wrap;
-  word-break: break-all;
-  background-color: #282c35;
-  color: #abb2bf;
-  display: block;
-  margin: 0 0 1.5625em;
-  border-radius: 4px;
-  overflow: auto;
-  padding: 2.5vw;
-  tab-size: 4;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
 }
 
 article * {
@@ -237,3 +210,19 @@ select {
     scroll-behavior: initial;
   }
 }
+
+.container {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* ALL SCSS IMPORTS HERE */
+@import "./scss/webfonts";
+@import "./scss/typography";

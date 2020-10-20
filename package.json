@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "keywords": [ 
+  "keywords": [
     "nextjs",
     "markdown",
     "react",
@@ -22,16 +22,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clr": "rm -rf .next"
   },
   "dependencies": {
+    "babel-plugin-prismjs": "^2.0.1",
+    "babel-plugin-styled-components": "^1.11.1",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "next": "9.5.3",
+    "prismjs": "^1.22.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.1",
-    "remark-html": "^13.0.1"
+    "remark-html": "^13.0.1",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "sass": "^1.27.0"

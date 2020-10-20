@@ -28,3 +28,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Some Resources:
+
+- text-decoration-thickness - https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-thickness
+
+- How to show time and date in realtime in React JS? - https://stackoverflow.com/questions/63219753/how-to-show-time-and-date-in-realtime-in-react-js
+
+- Get month name from Date - https://stackoverflow.com/questions/1643320/get-month-name-from-date
+
+- PrismJS using babel-plugin-prismjs - https://stackoverflow.com/questions/60564172/prismjs-with-react-using-babel-plugin-prismjs

@@ -1,15 +1,14 @@
 import Head from "next/head"
+import styles from "./layout.module.scss"
+import utilStyles from "../styles/utils.module.scss"
 import Link from "next/link"
-import Navbar from "./Navbar"
-import HeroSection from "./HeroSection"
-import styled from "styled-components"
 
 const name = "[Your Name]"
 export const siteTitle = "Next.js Sample Website"
 
 export default function Layout({ children, home }) {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content='Learn how to build a personal website using Next.js' />
@@ -22,46 +21,43 @@ export default function Layout({ children, home }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <header>
+      <header className={styles.header}>
         {home ? (
           <>
-            <Navbar />
-            <HeroSection />
+            <img
+              src='/images/profile.jpg'
+              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              alt={name}
+            />
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
-            <Navbar />
+            <Link href='/'>
+              <a>
+                <img
+                  src='/images/profile.jpg'
+                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  alt={name}
+                />
+              </a>
+            </Link>
+            <h2 className={utilStyles.headingLg}>
+              <Link href='/'>
+                <a className={utilStyles.colorInherit}>{name}</a>
+              </Link>
+            </h2>
           </>
         )}
       </header>
       <main>{children}</main>
       {!home && (
-        <Wrapper>
+        <div className={styles.backToHome}>
           <Link href='/'>
-            <a>
-              <span>←</span> Back to home
-            </a>
+            <a>← Back to home</a>
           </Link>
-        </Wrapper>
+        </div>
       )}
-    </>
+    </div>
   )
 }
-
-const Wrapper = styled.div`
-  max-width: 1060px;
-  margin: 0 auto 100px auto;
-
-  a {
-    text-decoration: none;
-    color: var(--color-grey-10);
-
-    span {
-      font-size: 1.6rem;
-    }
-
-    &:hover {
-      color: var(--color-blue-0);
-    }
-  }
-`
